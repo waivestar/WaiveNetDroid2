@@ -1,0 +1,82 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="#0099cc" tools:context=".WaiveNetWV">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <TextView android:id="@+id/fullscreen_content" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:keepScreenOn="true" android:textColor="#33b5e5"
+        android:textStyle="bold" android:textSize="50sp" android:gravity="center" />
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout android:id="@+id/fullscreen_content_controls" style="?metaButtonBarStyle"
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@drawable/gradient_selector" android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView"
+                    android:src="@mipmap/wnlogo"
+                    android:layout_gravity="center_horizontal" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtUser"
+                    android:hint="Username"
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:textColorHint="#333333"
+                    android:background="@drawable/eddittext_selector"
+                    android:padding="10dip"
+                    android:layout_gravity="center_horizontal"
+                    android:autoText="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtPass"
+                    android:inputType="textPassword"
+                    android:hint="Password"
+                    android:textColor="#000000"
+                    android:textColorHint="#333333"
+                    android:background="@drawable/eddittext_selector"
+                    android:padding="10dip" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Save Username &amp; Password"
+                    android:id="@+id/checkBox1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp" />
+
+                <Button android:id="@+id/btn_login" style="?metaButtonBarButtonStyle"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                     android:text="Login"
+                    android:textStyle="bold"
+                    android:allowUndo="false"
+                    android:background="@drawable/button_bg"
+                    android:layout_marginTop="20dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>
